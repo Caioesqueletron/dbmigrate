@@ -34,14 +34,16 @@ func main() {
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 
+
 	switch cmd {
-	case "create":
+	case "dcreate":
 		runCreate(dir, args)
 	case "up":
 		runUp(ctx, dsn, dir, args)
 	case "down":
 		runDown(ctx, dsn, dir, args)
 	case "status":
+		fmt.Printf("teste")
 		runStatus(ctx, dsn, dir, args)
 	case "-h", "--help", "help":
 		usage()

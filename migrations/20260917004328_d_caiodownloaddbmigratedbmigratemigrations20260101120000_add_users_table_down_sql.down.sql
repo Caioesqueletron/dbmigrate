@@ -1,0 +1,2 @@
+-- +migrate down
+-- Write the rollback for the change above.
